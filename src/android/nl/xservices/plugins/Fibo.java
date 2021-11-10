@@ -20,7 +20,7 @@ public class Fibo extends CordovaPlugin {
               public void run() {
                 //https://cordova.apache.org/docs/en/10.x/guide/platforms/android/plugin.html
                 Int n = 12321;
-                callbackContext.success(n)
+                callbackContext.success(n);
                 // callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
               }
             });
