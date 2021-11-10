@@ -1,8 +1,8 @@
 function Fibo() {
 }
 
-Fibo.prototype.get = function (successCallback, errorCallback) {
-  cordova.exec(successCallback, errorCallback, "Fibo", "get", []);
+Fibo.prototype.get = function (n=0,successCallback, errorCallback) {
+  cordova.exec(successCallback, errorCallback, "Fibo", "get", [n]);
 };
 
 
