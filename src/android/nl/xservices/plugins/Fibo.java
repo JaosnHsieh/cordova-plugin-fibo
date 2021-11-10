@@ -19,8 +19,9 @@ public class Fibo extends CordovaPlugin {
             new Runnable() {
               public void run() {
                 //https://cordova.apache.org/docs/en/10.x/guide/platforms/android/plugin.html
-                int n = 12321;
-                callbackContext.success(n);
+                int n = args.getLong(0);
+                int value = this.getFibo(n);
+                callbackContext.success(value);
                 // callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
               }
             });
@@ -34,5 +35,13 @@ public class Fibo extends CordovaPlugin {
       callbackContext.error(e.getMessage());
       return false;
     }
+  }
+
+  private int getFibo(int n){
+      if( n <= 1){
+        return  n;
+      }
+
+      return this.getFibo(n - 1) + this.getFibo(n - 2);
   }
 }
