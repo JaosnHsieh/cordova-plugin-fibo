@@ -15,17 +15,18 @@ public class Fibo extends CordovaPlugin {
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
     try {
       if (ACTION_GET.equals(action)) {
-        cordova.getActivity().runOnUiThread(
-            new Runnable() {
-              public void run() {
-                //https://cordova.apache.org/docs/en/10.x/guide/platforms/android/plugin.html
-                int n = args.getLong(0);
-                int value = this.getFibo(n);
-                callbackContext.success(value);
-                // callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
-              }
-            });
+          //https://cordova.apache.org/docs/en/10.x/guide/platforms/android/plugin.html
+        int n = (int) args.getLong(0);
+        int value = this.getFibo(n);
+        callbackContext.success(value);
         return true;
+        // cordova.getActivity().runOnUiThread(
+        //     new Runnable() {
+        //       public void run() {
+              
+        //         // callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
+        //       }
+        //     });
 
       } else {
         callbackContext.error("Fibo." + action + " is not a supported function. Did you mean '" + ACTION_GET + "'?");
