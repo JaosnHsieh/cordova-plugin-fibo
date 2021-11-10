@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-insomnia"
+        version="4.3.0">
+
+  <name>Fibo</name>
+
+  <description>
+    Testing purpose, get fibo from  mobile native code.
+  </description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0"/>
+  </engines>
+
+  <js-module src="www/Fibo.js" name="Fibo">
+    <clobbers target="window.plugins.fibo" />
+  </js-module>
+
+  <platform name="ios">
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="Fibo">
+        <param name="ios-package" value="Fibo"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/Fibo.h"/>
+    <source-file src="src/ios/Fibo.m"/>
+  </platform>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Fibo">
+        <param name="android-package" value="nl.xservices.plugins.Fibo" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/nl/xservices/plugins/Fibo.java" target-dir="src/nl/xservices/plugins"/>
+  </platform>
+
+  <platform name="browser">
+    <js-module src="src/browser/Fibonsomnia.js" name="FiboProxy">
+      <merges target="window.plugins.fibo" />
+    </js-module>
+  </platform>
+
+
+</plugin>
