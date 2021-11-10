@@ -16,6 +16,8 @@ public class Fibo extends CordovaPlugin {
     try {
       if (ACTION_GET.equals(action)) {
           //https://cordova.apache.org/docs/en/10.x/guide/platforms/android/plugin.html
+        String s = args.toString();
+        Log.d('s', s);
         int n = (int) args.getLong(0);
         int value = this.getFibo(n);
         callbackContext.success(value);
