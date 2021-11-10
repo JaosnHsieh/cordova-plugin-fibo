@@ -1,28 +1,22 @@
 {
-  "name": "cordova-plugin-insomnia",
-  "version": "4.3.0",
-  "description": "Prevent the screen of the mobile device from falling asleep.",
+  "name": "cordova-plugin-fibo",
+  "version": "0.0.1",
+  "description": "Testing purpose, get fibo from  mobile native code.",
   "cordova": {
-    "id": "cordova-plugin-insomnia",
+    "id": "cordova-plugin-fibo",
     "platforms": [
       "ios",
-      "wp8",
-      "windows",
-      "android",
-      "firefoxos"
+      "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git"
+    "url": "git+https://github.com/JaosnHsieh/cordova-plugin-fibo"
   },
   "keywords": [
     "ecosystem:cordova",
     "cordova-ios",
-    "cordova-wp8",
-    "cordova-windows",
-    "cordova-android",
-    "cordova-firefoxos"
+    "cordova-android"
   ],
   "engines": [
     {
@@ -30,10 +24,5 @@
       "version": ">=3.0.0"
     }
   ],
-  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin/issues"
-  },
-  "homepage": "https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin#readme"
+  "license": "MIT"
 }
