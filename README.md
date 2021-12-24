@@ -1,3 +1,19 @@
+## branch set-text-webview
+
+test to solve `framework7` fab icon wrong position on android issue.
+
+`http://github.com/phonegap/phonegap-mobile-accessibility` seems working, it was showing error first during installing. But now it works again.
+
+## References
+
+https://stackoverflow.com/questions/54975291/angular-material-icon-not-centered-in-android-app-with-cordova
+
+https://github.com/gitawego/cordova-webview-setting/blob/master/src/android/WebviewSetting.java
+
+https://github.com/apache/cordova-android/blob/master/framework/src/org/apache/cordova/CordovaWebView.java
+
+https://developer.android.com/reference/android/webkit/WebSettings.TextSize
+
 # cordova-plugin-fibo
 
 For testing cordova plugin only, get fibo from mobile native code....
